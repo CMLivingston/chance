@@ -6,6 +6,8 @@
 #
 default: &default
   adapter: mysql2
+  username: root
+  password: matrix
   pool: 5
   timeout: 5000
 
@@ -14,9 +16,7 @@ development:
   database: chance_dev
   #username: chip
   #password: forzabatmanhydeki
-  username: root
-  password: matrix
-  host: localhost
+  host: 127.0.0.1
   socket: /tmp/mysql.sock
 
 # Warning: The database defined as "test" will be erased and
@@ -25,6 +25,10 @@ development:
 test:
   <<: *default
   database: chance_test
+  username: chip
+  password: forzabatmanhydeki
+  host: 127.0.0.1
+  socket: /tmp/mysql.sock
 
 production:
   <<: *default
