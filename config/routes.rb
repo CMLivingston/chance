@@ -1,13 +1,17 @@
 Rails.application.routes.draw do
   devise_for :users, :path => "u"
-  
+  resources :matches
   root 'pages#home'
 
   get '/home' => 'pages#home'
 
   get '/profile' => 'pages#profile'
 
-  get '/matches' => 'pages#matches'
+  #might use matches now
+  #get '/matches' => 'pages#matches'
+
+
+  #get '/u/:id' => 'pages#profile'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

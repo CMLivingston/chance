@@ -6,8 +6,10 @@ class PagesController < ApplicationController
   end
 
   def profile
+  	#@newMatch = Match.new
   end
 
-  def explore
+  def matches
+  	#@newMatch = Match.new
   end
 end

@@ -1,0 +1,18 @@
+<center>
+  <%= form_for(@newMatch) do |f| %>
+    <h1>Match!</h1>
+    <div class="field">
+      <%= f.label :content %><br />
+      <%= f.content_field :content, autofocus: true %>
+    </div>
+
+    <div class="field">
+      <%= f.label :meet_time %> <i>(leave blank if you don't want to change it)</i><br />
+      <%= f.password_field :meet_time, autocomplete: "off" %>
+    </div>
+
+    <div class="actions">
+      <%= f.submit "Send" %>
+    </div>
+  <% end %>
+</center>
