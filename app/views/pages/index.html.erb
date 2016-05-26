@@ -1,6 +1,12 @@
-<div class="row">
-  <div class="col-sm-12 text-center bootstrap-welcome">
-    <h1>Bootstrap 4 Works!</h1>
-    <p class="lead">Go ahead and build your awesome app now.</p>
-  </div>
-</div>
+<!-- check if user is signed in for which template to use -->
+<% if !user_signed_in? %>
+	<div class="row">
+	  <div class="col-sm-12 text-center bootstrap-welcome">
+	    <h1>This should show if you are not signed in/up!</h1>
+	    <p class="lead">Go ahead and build your awesome date now.</p>
+	  </div>
+	</div>
+<% else %>
+	<p>user signed in so index does nothing (pages#index)</p>
+<% end %>
+

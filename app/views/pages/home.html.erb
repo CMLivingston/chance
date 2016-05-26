@@ -1,16 +1,20 @@
-<div class="row">
-	<div class="col-xs-8">
-		<div class="panel panel-default">
-			<div class="panel-body">
-				<p>Watchlist</p>
+<% if !user_signed_in? %>
+	<%= render 'layouts/banner' %>
+<% else %>
+	<div class="row">
+		<div class="col-xs-8">
+			<div class="panel panel-default">
+				<div class="panel-body">
+					<p>Watchlist</p>
+				</div>
+			</div>
+		</div>
+		<div class="col-xs-4">
+			<div class="panel panel-default">
+				<div class="panel-body">
+					<p>Matches</p>
+				</div>
 			</div>
 		</div>
 	</div>
-	<div class="col-xs-4">
-		<div class="panel panel-default">
-			<div class="panel-body">
-				<p>Matches</p>
-			</div>
-		</div>
-	</div>
-</div>
+<% end %>
