@@ -6,8 +6,8 @@
 #
 default: &default
   adapter: mysql2
-  username: root
-  password: matrix
+  username: chip
+  password: forzabatmanhydeki
   pool: 5
   timeout: 5000
 
