@@ -7,15 +7,13 @@
 default: &default
   adapter: mysql2
   username: chip
-  password: forzabatmanhydeki
+  password: 
   pool: 5
   timeout: 5000
 
 development:
   <<: *default
   database: chance_dev
-  #username: chip
-  #password: forzabatmanhydeki
   host: 127.0.0.1
   socket: /tmp/mysql.sock
 
@@ -25,8 +23,6 @@ development:
 test:
   <<: *default
   database: chance_test
-  username: chip
-  password: forzabatmanhydeki
   host: 127.0.0.1
   socket: /tmp/mysql.sock
 
