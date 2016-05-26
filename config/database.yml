@@ -7,7 +7,7 @@
 default: &default
   adapter: mysql2
   username: chip
-  password: 
+  password: forzabatmanhydeki
   pool: 5
   timeout: 5000
 
