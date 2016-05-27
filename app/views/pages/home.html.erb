@@ -7,6 +7,11 @@
 				<div class="panel-body">
 					<p>Watchlist</p>
 				</div>
+				<% for @u in @following %>
+					<div class="panel-body">
+						<p><%= @u.email %></p>
+					</div>
+				<% end %>
 			</div>
 		</div>
 		<div class="col-xs-4">
@@ -14,6 +19,11 @@
 				<div class="panel-body">
 					<p>Matches</p>
 				</div>
+				<% for @m in @matches %>
+					<div class="panel-body">
+						<p><%= @m.user_id %></p>
+					</div>
+				<% end %>
 			</div>
 		</div>
 	</div>

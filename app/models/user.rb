@@ -10,7 +10,7 @@ class User < ActiveRecord::Base
   has_many :following, through: :active_relationships, source: :followed
   has_many :followers, through: :passive_relationships, source: :follower
   
-  after_initialize :init
+  before_save :init
 
   # here is the current email validation
   validates :email, format: { with: /\b[A-Z0-9._%a-z\-]+@dartmouth.edu\z/, message: ": Sorry! You must have a Dartmouth email account to sign up." }

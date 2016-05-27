@@ -1,6 +1,12 @@
 Rails.application.routes.draw do
   devise_for :users, :path => "u"
   resources :matches
+  resources :users do
+    member do
+      get :following, :followers
+    end
+  end
+  
   root 'pages#home'
 
   get '/home' => 'pages#home'
