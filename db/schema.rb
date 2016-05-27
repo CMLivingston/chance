@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160527032216) do
+ActiveRecord::Schema.define(version: 20160527032455) do
 
   create_table "matches", force: true do |t|
     t.text     "content"
@@ -21,6 +21,7 @@ ActiveRecord::Schema.define(version: 20160527032216) do
     t.datetime "updated_at"
     t.boolean  "sent"
     t.string   "meet_loc"
+    t.integer  "receiver_id"
   end
 
   add_index "matches", ["user_id", "created_at"], name: "index_matches_on_user_id_and_created_at", using: :btree
