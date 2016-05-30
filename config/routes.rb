@@ -13,6 +13,8 @@ Rails.application.routes.draw do
 
   get '/profile' => 'pages#profile'
 
+  post '/u/search' => 'users#search', as: "search_users"
+
   #might use matches now
   #get '/matches' => 'pages#matches'
 
