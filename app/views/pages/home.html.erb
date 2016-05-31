@@ -9,7 +9,9 @@
 				</div>
 				<% for @u in @following %>
 					<div class="panel-body">
-						<p><%= @u.email %></p>
+							<%= link_to "X", remove_user_from_list_path(:u_id => @u.id), :method => :post, class: "btn-primary btn btn-sm pull-right main-color" %>
+						<!-- could also have email here...-->
+						<p><%= @u.first_name.to_s + ' ' + @u.last_name.to_s + " ----> " + @u.email.to_s %></p>
 					</div>
 				<% end %>
 			</div>

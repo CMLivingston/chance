@@ -38,3 +38,18 @@
 body {
 	background-color: rgba(212,212,212,0.3);
 }
+
+
+.btn-primary, .btn-primary:active, .btn-primary:focus {
+    background-color: white !important;
+    border: 1px solid #cf4278;
+}
+
+.btn-primary:hover, .btn-primary:visited {
+    background-color: white;
+    border: 1px solid #cf4278;
+  }
+
+.red {
+	color: red;
+}

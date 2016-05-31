@@ -11,6 +11,21 @@ class PagesController < ApplicationController
     end
   end
 
+  def remove_user_from_list
+    
+    @u = "#{params[:u_id]}"
+    #byebug
+    begin
+      @user = User.find(@u)
+    rescue
+      raise "Could not find user with id : #{@u}"
+    end
+
+    current_user.unfollow(@user)
+    redirect_to :back
+
+  end
+
   def profile
   	#@newMatch = Match.new
   end
