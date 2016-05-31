@@ -1,5 +1,7 @@
 <h1>Search Results:</h1>
 <% @results.each do |u| %>
 	<!-- wrap this h2 tag in an anchor and we have search --> 
-   <h2><%= u.first_name + " " + u.last_name %></h2>
+  <h2>
+   	<%= link_to "#{u.first_name + " " + u.last_name}", add_user_to_list_path(:u_id => u.id), :method => :post  %>
+  </h2>
 <%end %>

@@ -9,11 +9,16 @@ Rails.application.routes.draw do
   
   root 'pages#home'
 
+
+  post '/remove' => 'pages#remove_user_from_list', as: 'remove_user_from_list'
+
   get '/home' => 'pages#home'
 
   get '/profile' => 'pages#profile'
 
-  post '/u/search' => 'users#search', as: "search_users"
+  post '/u/search' => 'users#search', as: 'search_users'
+
+  post '/u/add_user_to_list' => 'users#add_user_to_list', as: 'add_user_to_list'
 
   #might use matches now
   #get '/matches' => 'pages#matches'

@@ -23,6 +23,18 @@ class User < ActiveRecord::Base
 
   # helper methods
 
+  # the method to add person to users watchlist and check for a match y the followed_by method
+  def add_to_list(other)
+    if !self.following?(other)
+      self.follow(other)
+      if self.has_match?(other)
+        # MATCH!!!! OPEN A CARD OPTION!!!!
+      end
+    else
+      raise "Already following #{other.first_name} #{other.last_name}"
+    end
+  end
+
   def follow(other)
   	active_relationships.create(followed_id: other.id)
   end
@@ -35,4 +47,11 @@ class User < ActiveRecord::Base
   	following.include?(other)
   end
 
+  def followed_by?(other)
+    followers.include?(other)
+  end
+
+  def has_match?(other)
+    (following?(other) && followed_by?(other))
+  end
 end
